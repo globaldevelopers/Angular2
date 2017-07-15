@@ -17,6 +17,14 @@ let EventThumbnailComponent = class EventThumbnailComponent {
     handleClickMe() {
         this.eventClick.emit(this.event.name);
     }
+    getStartTimeClass() {
+        if (this.event && this.event.time === '8:00 am') {
+            return ['green', 'bold'];
+        }
+        else {
+            return ['blue'];
+        }
+    }
 };
 __decorate([
     core_1.Input(),
@@ -29,7 +37,14 @@ __decorate([
 EventThumbnailComponent = __decorate([
     core_1.Component({
         selector: 'event-thumbnail',
-        templateUrl: 'app/events/events-list.component.html'
+        templateUrl: 'app/events/events-list.component.html',
+        styles: [`
+
+        .green {color: red !important;}
+        .blue {color: blue !important;}
+        .bold { font-weight: bold; }
+        `
+        ]
     })
 ], EventThumbnailComponent);
 exports.EventThumbnailComponent = EventThumbnailComponent;

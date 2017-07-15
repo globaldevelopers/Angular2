@@ -10,10 +10,12 @@ const core_1 = require("@angular/core");
 const platform_browser_1 = require("@angular/platform-browser");
 const forms_1 = require("@angular/forms");
 const app_component_1 = require("./app.component");
+const toastr_service_1 = require("./Common/toastr.service");
 const events_app_component_1 = require("./events-app.component");
 const events_list_1 = require("./events/events-list");
 const event_thumbnail_component_1 = require("./events/event-thumbnail.component");
 const navbar_component_1 = require("./nav/navbar.component");
+const event_service_1 = require("./events/Shared/event.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -26,6 +28,7 @@ AppModule = __decorate([
             event_thumbnail_component_1.EventThumbnailComponent,
             navbar_component_1.NavBarComponent
         ],
+        providers: [toastr_service_1.ToastrService, event_service_1.EventService],
         bootstrap: [events_app_component_1.EventsAppComponent]
     })
 ], AppModule);

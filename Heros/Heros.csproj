@@ -213,7 +213,7 @@
   <ItemGroup>
     <Content Include="app\appStyle.css" />
     <Content Include="app\appTemplate.html" />
-    <Content Include="app\Events\Events-list.component.html" />
+    <Content Include="app\Events\events-list.component.html" />
     <Content Include="app\Nav\navbar-component.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -296,9 +296,11 @@
     <TypeScriptCompile Include="app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\Common\toastr.service.ts" />
     <TypeScriptCompile Include="app\events-app.component.ts" />
     <TypeScriptCompile Include="app\Events\event-thumbnail.component.ts" />
     <TypeScriptCompile Include="app\Events\events-list.ts" />
+    <TypeScriptCompile Include="app\Events\Shared\event.service.ts" />
     <TypeScriptCompile Include="app\Nav\navbar.component.ts" />
   </ItemGroup>
   <ItemGroup>

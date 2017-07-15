@@ -7,18 +7,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
-const toastr_service_1 = require("./common/toastr.service");
-let EventsAppComponent = class EventsAppComponent {
+let ToastrService = class ToastrService {
+    success(message, title) {
+        toastr.success(message, title);
+    }
+    info(message, title) {
+        toastr.info(message, title);
+    }
+    warning(message, title) {
+        toastr.warning(message, title);
+    }
+    error(message, title) {
+        toastr.error(message, title);
+    }
 };
-EventsAppComponent = __decorate([
-    core_1.Component({
-        selector: 'events-app',
-        providers: [toastr_service_1.ToastrService],
-        template: `
-        <nav-bar></nav-bar>
-        <events-list></events-list>
-    `
-    })
-], EventsAppComponent);
-exports.EventsAppComponent = EventsAppComponent;
-//# sourceMappingURL=events-app.component.js.map
+ToastrService = __decorate([
+    core_1.Injectable()
+], ToastrService);
+exports.ToastrService = ToastrService;
+//# sourceMappingURL=toastr.service.js.map

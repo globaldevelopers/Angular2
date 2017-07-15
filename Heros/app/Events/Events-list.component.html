@@ -1,13 +1,23 @@
-﻿<div class="hoverwell thumbnail">
-    <h2>{{event.name}}</h2>
-    <div>Date: {{event.date}}</div>
-    <div>Time: {{event.time}}</div>
-    <div>Price: ${{event.price}}</div>
-    <div>
-        <!--<pre>{{event.location | json}}</pre>-->
-        <span>Location: {{event.location.address}}</span>
-        <span>&nbsp;</span>
-        <span>{{event.location.city}}, {{event.location.country}}</span>
+﻿<div class="hoverwell thumbnail" (click)="handleClickMe()">
+    <h2>{{event?.name}}kkk</h2>
+    <div>Date: {{event?.date}}</div>
+
+    <div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">
+        Time: {{event?.time}}
+        <span *ngSwitchCase="'8:00 am'">(Early Start)</span>
+        <span *ngSwitchCase="'10:00 am'">(Last Start)</span>
+        <span *ngSwitchDefault>(Normal Start)</span>
     </div>
-    <button class="btn btn-primary" (click)="handleClickMe()">Click!</button>
+
+
+    <div>Price: ${{event?.price}}</div>
+    <div *ngIf="event?.location">
+        <span>Location: {{event?.location?.address}}</span>
+        <span>&nbsp;</span>
+        <span>{{event?.location?.city}}, {{event?.location?.country}}</span>
+    </div>
+    <div *ngIf="event?.onlineUrl">
+        Online Url: {{event.onlineUrl}}
+    </div>
+    <!--<button class="btn btn-primary" (click)="handleClickMe()">Click!</button>-->
 </div>

@@ -1,8 +1,16 @@
 ﻿import { Component, Input, Output, EventEmitter } from '@angular/core'
 
-@Component({
+@
+Component({
     selector: 'event-thumbnail',
-    templateUrl: 'app/events/events-list.component.html'
+    templateUrl: 'app/events/events-list.component.html',
+    styles: [`
+
+        .green {color: red !important;}
+        .blue {color: blue !important;}
+        .bold { font-weight: bold; }
+        `
+    ]
 })
 
 export class EventThumbnailComponent {
@@ -12,5 +20,17 @@ export class EventThumbnailComponent {
 
     handleClickMe() {
         this.eventClick.emit(this.event.name)
+    }
+
+    getStartTimeClass() {
+        if (this.event && this.event.time === '8:00 am') {
+            return ['green', 'bold']
+        } else {
+            return ['blue']
+        }
+        
+        
+
+
     }
 }
