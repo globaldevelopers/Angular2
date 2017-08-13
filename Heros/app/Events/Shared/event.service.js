@@ -11,6 +11,9 @@ let EventService = class EventService {
     getEvents() {
         return events;
     }
+    getEvent(id) {
+        return events.find(e => e.id === id);
+    }
 };
 EventService = __decorate([
     core_1.Injectable()

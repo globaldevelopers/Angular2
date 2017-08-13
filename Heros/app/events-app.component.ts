@@ -6,7 +6,7 @@ import { ToastrService } from './common/toastr.service'
     providers: [ToastrService],
     template: `
         <nav-bar></nav-bar>
-        <events-list></events-list>
+        <router-outlet></router-outlet>
     `
 })
 

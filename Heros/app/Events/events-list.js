@@ -27,7 +27,6 @@ let EventsListComponent = class EventsListComponent {
 };
 EventsListComponent = __decorate([
     core_1.Component({
-        selector: 'events-list',
         template: `
         <div>
             <h1>Upcoming Angular 2 Events</h1>

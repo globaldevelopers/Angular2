@@ -16,7 +16,7 @@ EventsAppComponent = __decorate([
         providers: [toastr_service_1.ToastrService],
         template: `
         <nav-bar></nav-bar>
-        <events-list></events-list>
+        <router-outlet></router-outlet>
     `
     })
 ], EventsAppComponent);
